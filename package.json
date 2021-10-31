@@ -14,7 +14,8 @@
     "@nestjs/platform-express": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@nestjs/schematics": "^7.0.0",
@@ -29,6 +30,7 @@
     "@nrwl/workspace": "13.1.2",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
+    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "~4.33.0",
     "@typescript-eslint/parser": "~4.33.0",
     "eslint": "7.32.0",

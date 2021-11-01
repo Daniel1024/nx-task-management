@@ -5,6 +5,7 @@ import { AppModule } from './app/app.module';
 import { TransformInterceptor } from './transform.interceptor';
 
 async function bootstrap() {
+  const logger = new Logger();
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
 
@@ -13,9 +14,9 @@ async function bootstrap() {
   app.useGlobalInterceptors(new TransformInterceptor());
 
   const port = process.env.PORT || 3333;
-  await app.listen(port, () => {
-    Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
-  });
+  await app.listen(port);
+
+  logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
 }
 
 bootstrap();

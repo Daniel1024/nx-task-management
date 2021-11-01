@@ -6,5 +6,6 @@ export const validationSchema = object({
   DB_PORT: number().default(5432),
   DB_USERNAME: string().required(),
   DB_PASSWORD: string().required(),
-  DB_DATABASE: string().required()
+  DB_DATABASE: string().required(),
+  JWT_SECRET: string().required()
 });

@@ -3,11 +3,13 @@ import { TasksModule } from './tasks/tasks.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { validationSchema } from '../config.schema';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: [`apps/api/.env.stage.${process.env.STAGE}`]
+      envFilePath: [`apps/api/.env.stage.${process.env.STAGE}`],
+      validationSchema
     }),
     TasksModule,
     TypeOrmModule.forRootAsync({
